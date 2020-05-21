@@ -1,13 +1,13 @@
 import React, { createContext, useReducer, useContext, useCallback } from 'react'
-import asyncer from 'resources/middlewares/asyncer'
-import { reducers, initialStates } from 'resources/reducers'
+import asyncer from '../middlewares/asyncer'
+import izanamiReducer from './izanamiReducer'
 
 const Izanami = () => {
-
   const IzanamiStore = createContext()
   const useStore = () => useContext(IzanamiStore);
 
   const Provider = ({ children }) => {
+    const { initialStates, reducers } = izanamiReducer.useReducer()
     const [state, dispatcher] = useReducer(reducers, initialStates)
     const dispatch = useCallback(asyncer(dispatcher, state), [])
     return (
