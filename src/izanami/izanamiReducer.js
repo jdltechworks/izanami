@@ -1,9 +1,9 @@
 import combineReducers from '../utils/combineReducers'
 
 class IzanamiReducer {
-  static initialStates = {}
-  static registeredReducers = {}
-  static reducers = () => {}
+  initialStates = {}
+  registeredReducers = {}
+  reducers = () => {}
   constructor() {
     return this
   }
@@ -18,4 +18,4 @@ class IzanamiReducer {
   }
 }
 
-export default new IzanamiReducer()
+export default IzanamiReducer

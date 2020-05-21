@@ -1,7 +1,7 @@
-import Izanami from 'resources/izanami'
-import bindActions from 'resources/izanami/bindActions'
-import * as registerActions from 'resources/actions/register'
-import * as formActions from 'resources/actions/form'
+import Izanami from './resources/izanami'
+import bindActions from './resources/izanami/bindActions'
+import * as registerActions from './resources/actions/register'
+import * as formActions from './resources/actions/form'
 
 const registrationHook = () => {
   return () => {
